@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkarsh-Odisha | {% block title %}{% endblock title %} </title>
+    <link rel="stylesheet" href="{% static 'header.css' %}">
+</head>
+<body>
+    <!-- nav start  -->
+    <header class="header">
+        <a href="#" class="logo">Utkarsha-Odisha</a>
+        <nav class="nav-items">
+            <div class="search-container">
+                <form action="">
+                  <input type="text" placeholder="Search Location..." name="search">
+                </form>
+            </div>
+          <a href="#">Plan your trip</a>
+          <a href="#">Login/Sign-up</a>
+          
+        </nav>
+      </header>
+    <!-- nav end  -->
+    
+    {% block body %}{% endblock body %}
+    
+    <!-- footer start  -->
+    
+    <footer>
+        <div class="footer-gray">
+          <div class="footer-custom">
+            <div class="footer-lists">
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">Contact number</h6>
+                <ul class="ftr-links-sub">
+                  <li>1234567890</li>
+                </ul>
+                <h6 class="ftr-hdr">Email us</h6>
+                <ul class="ftr-links-sub">
+                  <li><a href="mailto: abc@example.com" rel="nofollow">cgdjygu@gmail.com</a></li>
+                  <li><a href="mailto: abc@example.com" rel="nofollow">aloovada@gamil.com</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">Customer Service</h6>
+                <ul class="ftr-links-sub">
+                  <h3>About us</h3>
+                  <p>We are here to provide you with reliable and super personalized tour guide to Odisha and more...To give our customers the best trip experience.</p>
+    
+                </ul>
+              </div>
+              
+              <div class="footer-list-wrap">
+                <h6 class="ftr-hdr">My Account</h6>
+                <ul class="ftr-links-sub">
+                  <art:content rule="!loggedin">
+                    <li class="ftr-Login"><span class="link login-trigger">Access My Account</span></li>
+                    <li><span class="link" onclick="link('/asp/secure/your_account/track_orders-asp/_/posters.htm')">Track My Order</span></li>
+                  </art:content>
+                  <art:content rule="loggedin">
+                    <li class="ftr-Login"><span class="link ftr-access-my-account">Access My Account</span></li>
+                    <li><span class="link" onclick="window.location.href = getProfileKey() + '?pagetype=oh';">Track My Order</span></li>
+                  </art:content>
+                </ul>
+              </div>
+            
+            <div class="footer-social">
+              <h6 class="ftr-hdr">Follow Us</h6>
+              <ul>
+                <li>
+                  <a href="" title="Facebook" onclick="_gaq.push(['_trackSocial', 'Facebook', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="24" height="24" alt="Like us on Facebook" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/fb.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="" title="Google+" onclick="_gaq.push(['_trackSocial', 'GooglePlus', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="24" height="24" alt="Follow us on Google+" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/gplus.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="" target="_blank">
+                    <img width="24" height="24" alt="Follow us on Pinterest" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/pin-badge.png">
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="">
+                    <img width="24" height="24" alt="Follow us on Instagram" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/instagram-badge.png">
+                  </a>
+                </li>
+                <li>
+                  <a href="" title="Twitter" onclick="_gaq.push(['_trackSocial', 'Twitter', 'Follow', 'Footer', 'undefined', 'True']);">
+                    <img width="67" alt="Follow us on Twitter" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png">
+                  </a>
+                </li>
+              </ul>
+            </div>
+         
+      </footer>
+
+    <!-- footer end  -->
+</body>
+</html>
